@@ -1,0 +1,44 @@
+server:
+  port: 8081
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/girl?useUnicode=true&characterEncoding=utf8&autoReconnect=true&useSSL=false
+  jackson:
+    time-zone: GMT+8
+    date-format: yyyy-MM-dd HH:mm:ss
+  jpa:
+    show-sql: true
+    properties:
+      hibernate:
+        enable_lazy_load_no_trans: true
+  freemarker:
+    allow-request-override: false
+    allow-session-override: false
+    cache: false
+    charset: UTF-8
+    check-template-location: true
+    content-type: text/html
+    enabled: true
+    expose-request-attributes: false
+    expose-session-attributes: false
+    expose-spring-macro-helpers: true
+    prefer-file-system-access: true
+    suffix: .ftl
+    template-loader-path: ["classpath:/templates/"]
+    settings:
+      # template_update_delay : 1
+      default_encoding: UTF-8
+      number_format: 0.##########
+      datetime_format: yyyy-MM-dd HH:mm:ss
+      classic_compatible: true
+      locale: zh_CN
+  mail:
+    host: smtp.163.com
+    port: 25
+    username: username
+    password: password
+
