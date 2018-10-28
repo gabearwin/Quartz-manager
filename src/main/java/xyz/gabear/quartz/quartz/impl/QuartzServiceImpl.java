@@ -20,6 +20,7 @@ public class QuartzServiceImpl implements QuartzService {
     @Autowired
     private Scheduler scheduler;
 
+    // 可以参考下这个 https://github.com/yangchd/QuartzManager/blob/master/java/com/yangchd/util/QuartzManager.java
     /**
      * 默认的 job 的组名
      */
